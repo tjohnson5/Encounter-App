@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar no-border-bottom class="orange">
+    <!-- <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-title>Encounter @ ISU</ion-title>
+    <ion-buttons end>
+      <button (click)="openModal()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home">
+  <div id="encounter-logo"></div>
+  <div class="vision-statement">
+      Pressing <span style="font-weight:bold">Jesus</span> deep in the hearts of students so the <span style="font-weight:bold">GOSPEL</span> will take root in <span style="font-weight:bold">every corner</span> of the world.
+  </div>
+  <ion-grid>
+    <ion-row *ngIf="getTrack() != null">
+      <ion-col class="latestPodcast">
+          <div class="heading">Latest Podcast</div>
+          <div class="content">{{latestPodcast?.title}}</div>
+          <button small outline (click)="switchTabAndPlay(3)">Play</button>
+      </ion-col>
+      <ion-col class="nextEvent">
+          <div class="heading">Next Event</div>
+          <div class="content">{{nextEvent?.summary}}</div>
+          <div class="content">{{nextEvent?.startDayWeek}}, {{nextEvent?.startMonth}} {{nextEvent?.startDay}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

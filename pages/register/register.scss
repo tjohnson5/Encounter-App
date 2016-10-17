@@ -1,0 +1,27 @@
+.register {
+    ion-card-header{
+        text-align: center;
+        font-size:1.5em;
+        span{
+            display: block;
+        }
+        span.date{
+            font-size:.6em;
+        }
+    }
+    ion-buttons{
+        width: 80%;
+        margin: auto;
+    }
+    ion-card{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+    }
+}
+ion-content.register{
+        background-image: $register-bg-img;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+}

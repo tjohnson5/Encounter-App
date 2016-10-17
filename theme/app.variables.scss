@@ -1,0 +1,103 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// Ionic Shared Functions
+// --------------------------------------------------
+// Makes Ionic Sass functions available to your App
+
+@import 'globals.core';
+
+// App Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files. Setting
+// variables before Ionic's Sass will use these variables rather than
+// Ionic's default Sass variable values. App Shared Sass imports belong
+// in the app.core.scss file and not this file. Sass variables specific
+// to the mode belong in either the app.ios.scss or app.md.scss files.
+
+
+// App Shared Color Variables
+// --------------------------------------------------
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+// Both iOS and MD colors can be further customized if colors
+// are different per mode.
+
+$colors: (
+  primary:    #f37921,
+  secondary:  #2c6177,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B
+);
+
+$encounter-transparent-dark-gray: rgba(37, 37, 37, 0.9);
+$encounter-dark-gray: #252525;
+$encounter-darker-gray: #1c1c1c;
+$encounter-lighter-gray: #e1e1e1;
+$encounter-light-gray: #878787;
+$encounter-orange: #f37921;
+$encounter-transparent-orange: rgba(243, 121, 33, 0.8);
+$encounter-transparent-teal: rgba(44, 97, 119, 0.8);
+$encounter-transparent-light-gray: rgba(135, 135, 135, 0.8);
+$encounter-teal: #2c6177;
+$encounter-red: #900000;
+
+$podcast-bg-img: url('../../img/IMG2.jpg');
+$events-bg-img: url('../../img/IMG5.jpg');
+$register-bg-img: url('../../img/IMG6.jpg');
+$info-bg-img: url('../../img/IMG3.jpg');
+$home-bg-img: url('../../img/IMG7.jpg');
+$logo: url('../../img/encounterbrushwhite.png');
+
+
+.home, .events, .podcast, .register, .info{
+    ion-card-content{
+        color: $encounter-dark-gray;
+    }
+}
+
+
+.events{
+    ion-card h2{
+        font-weight:bold;
+    }
+}
+
+.orange{
+    .toolbar-background {
+        background-color: $encounter-transparent-orange !important;
+    }
+    .bar-button, .toolbar-title{
+        color:white;
+    }
+}
+
+.teal{
+    .toolbar-background {
+        background-color: $encounter-transparent-teal !important;
+    }
+    .bar-button, .toolbar-title{
+        color:white;
+    }
+}
+
+ion-refresher{
+    background-color: white;
+}
+ion-card{
+    background-color: rgba(255, 255, 255, .9) !important;
+}
+ion-card-header{
+    white-space:normal !important;
+}
+scroll-content{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $encounter-lighter-gray;
+    p{
+        color: $encounter-lighter-gray;
+    }
+}

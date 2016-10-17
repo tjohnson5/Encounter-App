@@ -1,0 +1,19 @@
+.podcast {
+    .item{
+        padding: 10px;
+        border-radius: 2px;
+        margin-bottom:10px;
+    }
+    button{
+        width: 100%;
+    }
+    ion-card{
+        padding: 5px;
+    }
+}
+ion-content.podcast{
+        background-image: $podcast-bg-img;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+}

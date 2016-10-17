@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar no-border-bottom class="teal">
+    <ion-title>Profile</ion-title>
+    <ion-buttons start>
+      <button (click)="dismissModal()">
+          <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="info" padding>
+    <ion-card text-wrap>
+        <ion-card-content>
+            Notice: You must complete this profile before signing up for events.
+        </ion-card-content>
+    </ion-card>
+  <form id="student-form" [formGroup]="studentForm" (ngSubmit)="saveInfo(studentForm.value)" class="list">
+        <ion-item>
+            <ion-label floating>First Name</ion-label>
+            <ion-input [formControl]="firstName" type="text" [ngModel]='student.firstName'></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Last Name</ion-label>
+            <ion-input [formControl]="lastName" type="text" [ngModel]='student.lastName'></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input [formControl]="emailAddress" type="email" [ngModel]='student.emailAddress'></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Phone</ion-label>
+            <ion-input [formControl]="phoneNumber" type="tel" [ngModel]='student.phoneNumber'></ion-input>
+        </ion-item>
+      <!-- <label class="item item-input " id="home-input1" name="firstName">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="" [formControl]="firstName" [ngModel]='student.firstName' required>
+      </label>
+      <label class="item item-input " id="home-input2" name="lastName">
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="" [formControl]="lastName" [ngModel]='student.lastName' required>
+      </label>
+      <label class="item item-input " id="home-input3" name="emailAddress">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="" [formControl]="emailAddress" [ngModel]='student.emailAddress' required>
+      </label>
+      <label class="item item-input " id="home-input4" name="phoneNumber">
+          <span class="input-label">Phone</span>
+          <input type="tel" placeholder="" [formControl]="phoneNumber" [ngModel]='student.phoneNumber' required>
+      </label> -->
+        <ion-item>
+            <ion-label floating>Year in School</ion-label>
+            <ion-select [formControl]="yearInSchool" [ngModel]='student.yearInSchool' required>
+                <ion-option [selected]="student.yearInSchool == 'Freshman'">Freshman</ion-option>
+                <ion-option [selected]="student.yearInSchool == 'Sophomore'">Sophomore</ion-option>
+                <ion-option [selected]="student.yearInSchool == 'Junior'">Junior</ion-option>
+                <ion-option [selected]="student.yearInSchool == 'Senior'">Senior</ion-option>
+                <ion-option [selected]="student.yearInSchool == 'Grad Student'">Grad Student</ion-option>
+                <ion-option [selected]="student.yearInSchool == 'Other'">Other</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Gender</ion-label>
+            <ion-select [formControl]="gender" [ngModel]='student.gender' required>
+                <ion-option [selected]="student.gender == 'Male'">Male</ion-option>
+                <ion-option [selected]="student.gender == 'Female'">Female</ion-option>
+            </ion-select>
+        </ion-item>
+      <!-- <label class="item item-select " id="home-select1" name="yearInSchool">
+          <span class="input-label">Year in School</span>
+          <ion-select [formControl]="yearInSchool" [ngModel]='student.yearInSchool' required>
+              <ion-option [selected]="student.yearInSchool == 'Freshman'">Freshman</ion-option>
+              <ion-option [selected]="student.yearInSchool == 'Sophomore'">Sophomore</ion-option>
+              <ion-option [selected]="student.yearInSchool == 'Junior'">Junior</ion-option>
+              <ion-option [selected]="student.yearInSchool == 'Senior'">Senior</ion-option>
+              <ion-option [selected]="student.yearInSchool == 'Other'">Other</ion-option>
+          </ion-select>
+      </label>
+      <label class="item item-select " id="home-select2" name="gender">
+          <span class="input-label">Gender</span>
+          <ion-select [formControl]="gender" [ngModel]='student.gender' required>
+              <ion-option [selected]="student.gender == 'Male'">Male</ion-option>
+              <ion-option [selected]="student.gender == 'Female'">Female</ion-option>
+          </ion-select>
+      </label>-->
+      <button block secondary type="submit">Update</button>
+  </form>
+
+  <ion-buttons end>
+      <button clear class="alert" (click)="presentProfileWipeActionSheet()">
+          <ion-icon name="alert"></ion-icon>
+      </button>
+  </ion-buttons>
+</ion-content>

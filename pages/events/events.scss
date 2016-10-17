@@ -1,0 +1,41 @@
+.events {
+    ion-icon{
+        font-size: 40px;
+    }
+    .day-of-week{
+        font-size: .8em;
+
+    }
+    .start-day{
+        font-size: 2.5em;
+    }
+
+    .event-card-head{
+        text-align: center;
+
+        span{
+            display:block;
+            text-align: center;
+            line-height: 1em;
+        }
+    }
+    .event-card-head{
+        width: 40%;
+        margin: auto;
+        padding: 3px;
+        border: 1px solid;
+        border-color: $encounter-light-gray;
+    }
+    .start-time{
+        display: block;
+        text-align: center;
+    }
+
+
+}
+ion-content.events{
+        background-image: $events-bg-img;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+}

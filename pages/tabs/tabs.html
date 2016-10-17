@@ -1,0 +1,9 @@
+<soundbar class="soundbar"></soundbar>
+<ion-tabs id="theTabBar">
+  <ion-tab [root]="HomeRoot" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="EventsRoot" tabTitle="Events" tabIcon="calendar"></ion-tab>
+  <ion-tab [root]="EventRegRoot" tabTitle="Signups" tabIcon="clipboard"></ion-tab>
+  <ion-tab [root]="PodcastRoot" tabTitle="Podcast" tabIcon="microphone"></ion-tab>
+  <!-- <ion-tab [root]="tab5Root" tabTitle="Give" tabIcon="card"></ion-tab> -->
+  <ion-tab tabTitle="Give" tabIcon="card" (ionSelect)="openURL('https://www.aplos.com/aws/give/Encounter/first5')">></ion-tab>
+</ion-tabs>

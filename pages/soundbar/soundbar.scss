@@ -1,0 +1,37 @@
+.soundbar {
+    ion-title{
+        padding-left: 55px;
+        padding-right: 35px;
+    }
+  ion-toolbar {
+    position: absolute !important;
+    bottom: 63px;
+    border-bottom: 1px solid $encounter-light-gray;
+    height: 45px;
+  }
+  .bar-button,
+  .toolbar-title {
+    font-size: 1em;
+    color: $encounter-orange;
+  }
+  .toolbar-title{
+
+  }
+  ion-buttons {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .toolbar-background {
+    background-color: $encounter-transparent-dark-gray;
+  }
+  ion-spinner {
+    * {
+      stroke: $encounter-orange;
+    }
+    &.spinner-bubbles circle,
+    &.spinner-circles circle,
+    &.spinner-dots circle {
+      fill: $encounter-orange;
+    }
+  }
+}

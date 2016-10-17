@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar no-border-bottom class="orange">
+      <!-- <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button> -->
+    <ion-title>Upcoming Events</ion-title>
+    <ion-buttons end>
+      <button (click)="doRefresh()">
+          <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen padding class="events">
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+             pullingIcon="arrow-dropdown"
+             pullingText="Pull to refresh"
+             refreshingSpinner="circles"
+             refreshingText="Refreshing...">
+           </ion-refresher-content>
+    </ion-refresher> -->
+
+          <ion-card *ngFor="let event of events" text-wrap>
+              <ion-card-header text-wrap>
+                  <div class="event-card-head">
+                      <span class="day-of-week">{{event.startDayWeek}}</span>
+                      <span class="start-month">{{event.startMonth}}</span>
+                      <span class="start-day">{{event.startDay}}</span>
+                      <span class="start-year">{{event.startYear}}</span>
+                  </div>
+                  <div class="start-time">{{event.startTime}}</div>
+              </ion-card-header>
+              <ion-card-content>
+                <h2>{{event.summary}}</h2>
+                <p>{{event.description}}</p>
+              </ion-card-content>
+              <!-- <ion-card-content ng-if="event.startDate.dateTime">
+                 {{event.startDate.dateTime}}
+              </ion-card-content> -->
+          </ion-card>
+
+
+</ion-content>
